@@ -213,6 +213,16 @@
           <div >
             
             <div  style="background-color:#da2b26;padding:30px; 20px;">
+
+<?php if($_GET['msg']){  ?>
+
+                       echo message sent ..Thank you <NAME> for giving us the opportunity.
+For your job, we estimate that our pricing would be $<X>
+<VIDEO THAT AUTO-PLAYS EXPLAINING PROCESS FOR THE CUSTOMER> Please click here if you’d like us to send you an official quote for your job. <LINK>
+
+
+<?php }else{  ?>
+              
                <h2>Fill information and get a complimentary quote</h2>
         
                <form action="calculat.php" method="post">
@@ -263,6 +273,9 @@
                 background-repeat: no-repeat;">CALCULAT</button>
         
                </form>
+
+
+              <?php }  ?>
             </div>
            
           </div>  
