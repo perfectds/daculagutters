@@ -251,7 +251,7 @@ For your job, we estimate that our pricing would be $<X>
                 <input type="number" name="req" required><br><br>
                 <label for="">How Tall Are the Downspouts In Feet?</label><br>
                 <input type="number" name="all"><br><br>
-                <button style="cursor: pointer;display: block;
+                <button name="btn" style="cursor: pointer;display: block;
                 border-style: solid;
                 
                 width: 271px;
@@ -434,4 +434,32 @@ For your job, we estimate that our pricing would be $<X>
       </div>
       
     </div>
-</html>    
+</html>  
+  <?php
+if(isset($_POST['btn'])){
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  
+  $qouat=$_POST['qouat'];
+  $time=$_POST['time'];
+  $feet=$_POST['feet'];
+  $req=$_POST['req'];
+  $all=$_POST['all'];
+  if($qouat=="Residential Quote"){
+      $result=(($feet+$req)*$all)*11;
+     hedaer("location:https://daculagutters.com/index.php?msg=1;");
+      //echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
+     // echo "$". $result;
+      die;
+  }
+  if($qouat=="Commercial Quote"){
+      $result=(($feet+$req)*$all)*22;
+     // echo "$". $result;
+     // echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
+      die;
+  }
+}
+
+
+?>
+  
