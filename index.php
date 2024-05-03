@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 if(isset($_POST['btn'])){
   $name=$_POST['name'];
   $email=$_POST['email'];
@@ -11,18 +11,20 @@ if(isset($_POST['btn'])){
   $all=$_POST['all'];
   if($qouat=="Residential Quote"){
       $result=(($feet+$req)*$all)*11;
-     hedaer("location:https://daculagutters.com/index.php?msg=1;");
+     header("location:http://localhost/daculagutters-main/?msg=1||$name||$result");
       
       die;
   }
   if($qouat=="Commercial Quote"){
       $result=(($feet+$req)*$all)*22;
-    
+      header("location:http://localhost/daculagutters-main/?msg=1||$name||$result");
+      die;
   }
 }
 
 
 ?>
+
  
   
 
@@ -114,9 +116,19 @@ if(isset($_POST['btn'])){
             </p>
           </div>
           <div class="lp-element lp-pom-form" id="lp-pom-form-64">
-            <form action="https://synapsweb.com/fsg?pageId=601dfd79-513a-4585-a8b5-6cfab5e6348d&amp;variant=a"
+          <?php if($_GET['mail']){ ?>
+            <h1 style="text-align: center;
+                       color:yellow;
+                       font-size:20px;
+                       position: absolute;
+                       bottom: 70px;
+                       margin-bottom:20px">Email send Sucessfully..</h1>
+            <?php }else{ 
+              
+             }?>
+            <form action="mail.php"
               method="POST">
-              <input type="hidden" name="pageId" value="601dfd79-513a-4585-a8b5-6cfab5e6348d"><input type="hidden"
+              <input type="hidden" name="pageId" value=""><input type="hidden"
                 name="pageVariant" value="a">
               <fieldset class="clearfix" style="width: 276px; height: -16px;">
                 <div class="lp-pom-form-field clearfix" id="container_name">
@@ -129,20 +141,52 @@ if(isset($_POST['btn'])){
                 </div>
                 <div class="lp-pom-form-field clearfix" id="container_phone_number">
                   <label for="phone_number" class="main lp-form-label" id="label_phone_number" style="height: auto;">Phone
-                    Number</label><input type="text" id="phone_number" name="phone_number"
-                    class="text form_elem_phone_number">
+                    Number</label><input type="text" id="phone_number" name="phone" class="text form_elem_phone_number">
                 </div>
                 <div class="lp-pom-form-field clearfix" id="container_company">
                   <label for="company" class="main lp-form-label" id="label_company"
                     style="height: auto;">Company</label><input type="text" id="company" name="company"
                     class="text form_elem_company">
                 </div>
+
+                <button style="cursor: pointer;display: block;
+                border-style: solid;
+                
+                width: 271px;
+                height: 51px;
+                position: absolute;
+                top:300px;
+                right:5px;
+                behavior: url(/PIE.htc);
+                border-radius: 5px;
+                background: #eeeeee;
+                  background-repeat: repeat;
+                -pie-background: rgba(247, 148, 29, 1);
+                color: #000000;
+                border-width: 1px;
+                border-color: #333333;
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: normal;
+                font-family: Ubuntu;
+                text-align: center;
+                background-repeat: no-repeat;">CALCULAT</button>
               </fieldset>
+            
             </form>
-            <a class="lp-element lp-pom-button" id="lp-pom-button-65"
+            <!-- <a class="lp-element lp-pom-button" id="lp-pom-button-65"
               href="https://synapsweb.com/landing/Homes%20Realestate%20unbounce%20Landing%20Page%20Preview%20-%20ThemeForest_files/a_002.html#"><span
-                class="label">SIGN UP NOW!</span></a>
+                class="label">SIGN UP NOW!</span></a> -->
           </div>
+
+
+
+
+
+
+
+
+          
         </div>
         <div class="lp-element lp-pom-text nlh" id="lp-pom-text-17" style="height: auto;">
           <p>
@@ -231,7 +275,7 @@ if(isset($_POST['btn'])){
                 nec erostibulum in faucibus orci luctus et ultrices posuere</span></span>
           </p>
         </div>
-        <div class="lp-element lp-pom-text nlh" id="lp-pom-text-114" style="height: auto;">
+        <div class="lp-element lp-pom-text nlh" id="lp-pom-text-114" style="height: auto;width:100%;">
           <p>
             <span style="color:#424345;"><span style="font-size: 48px;"><span style="font-family: oswald;">FEATURE
                   LISTING</span></span></span>
@@ -240,20 +284,24 @@ if(isset($_POST['btn'])){
           </p>
           <div >
             
-            <div  style="background-color:#da2b26;padding:30px; 20px;">
+            <div  style="background-color:#da2b26;padding:30px; width:100%;">
 
-<?php if($_GET['msg']){  ?>
-
-                       echo message sent ..Thank you <NAME> for giving us the opportunity.
-For your job, we estimate that our pricing would be $<X>
-<VIDEO THAT AUTO-PLAYS EXPLAINING PROCESS FOR THE CUSTOMER> Please click here if you’d like us to send you an official quote for your job. <LINK>
+<?php if($_GET['msg']){  
+  $msg = $_GET['msg'];
+  list($msg_code, $name, $result) = explode('||', $msg);
+  
+  ?>
+<h1 style="color: white; text-align:center; margin-top:40px">Thank you<span style="color: yellow;"> <?php echo   $name;?></span> for giving us the opportunity.
+For your job, we estimate that our pricing would be <span style="color:yellow;"> $<?php echo   $result;?></span></h1><br><br>
+<iframe width="100%" height="380px" src="https://www.youtube.com/embed/Arvc8aQM4RE?autoplay=1" frameborder="0" allowfullscreen></iframe><br><br>                  
+  <a href="" style="text-decoration: none; color:yellow; font-size:22px; margin-top:35px; padding-bottom:40px; text-align:center;">Please click here if you’d like us to send you an official quote for your job.</a>
 
 
 <?php }else{  ?>
               
                <h2>Fill information and get a complimentary quote</h2>
         
-               <form action="" method="post">
+               <form action="" method="post" style="max-width:500px; margin:auto;padding-bottom:50px;">
                 <label for="">Name</label><br>
                 <input type="text" name="name" placeholder="Enter Name" required><br><br>
                 <label for="">Email</label><br>
