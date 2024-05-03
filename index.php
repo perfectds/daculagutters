@@ -291,7 +291,7 @@ if(isset($_POST['btn'])){
   list($msg_code, $name, $result) = explode('||', $msg);
   
   ?>
-<h1 style="color: white; text-align:center; margin-top:40px">Thank you<span style="color: yellow;"> <?php echo   $name;?></span> for giving us the opportunity.
+<h1 style="color: white; text-align:center; margin-top:40px">Thank you<span style="color: yellow;"> <?php echo 'dinesh'.$name;?></span> for giving us the opportunity.
 For your job, we estimate that our pricing would be <span style="color:yellow;"> $<?php echo   $result;?></span></h1><br><br>
 <iframe width="100%" height="380px" src="https://www.youtube.com/embed/Arvc8aQM4RE?autoplay=1" frameborder="0" allowfullscreen></iframe><br><br>                  
   <a href="" style="text-decoration: none; color:yellow; font-size:22px; margin-top:35px; padding-bottom:40px; text-align:center;">Please click here if you’d like us to send you an official quote for your job.</a>
