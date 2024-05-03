@@ -12,15 +12,12 @@ if(isset($_POST['btn'])){
   if($qouat=="Residential Quote"){
       $result=(($feet+$req)*$all)*11;
      hedaer("location:https://daculagutters.com/index.php?msg=1;");
-      //echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
-     // echo "$". $result;
+      
       die;
   }
   if($qouat=="Commercial Quote"){
       $result=(($feet+$req)*$all)*22;
-     // echo "$". $result;
-     // echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
-      die;
+    
   }
 }
 
