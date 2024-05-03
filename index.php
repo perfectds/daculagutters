@@ -11,13 +11,13 @@ if(isset($_POST['btn'])){
   $all=$_POST['all'];
   if($qouat=="Residential Quote"){
       $result=(($feet+$req)*$all)*11;
-     header("location:http://localhost/daculagutters-main/?msg=1||$name||$result");
+     header("location:https://daculagutters.com//?msg=1||$name||$result");
       
       die;
   }
   if($qouat=="Commercial Quote"){
       $result=(($feet+$req)*$all)*22;
-      header("location:http://localhost/daculagutters-main/?msg=1||$name||$result");
+      header("location:https://daculagutters.com/?msg=1||$name||$result");
       die;
   }
 }
@@ -286,7 +286,7 @@ if(isset($_POST['btn'])){
             
             <div  style="background-color:#da2b26;padding:30px; width:100%;">
 
-<?php if($_GET['msg']){  
+<?php if(isset($_GET['msg']) && $_GET['msg']==1 ){  
   $msg = $_GET['msg'];
   list($msg_code, $name, $result) = explode('||', $msg);
   
