@@ -1,3 +1,34 @@
+<?php
+
+if(isset($_POST['btn'])){
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  
+  $qouat=$_POST['qouat'];
+  $time=$_POST['time'];
+  $feet=$_POST['feet'];
+  $req=$_POST['req'];
+  $all=$_POST['all'];
+  if($qouat=="Residential Quote"){
+      $result=(($feet+$req)*$all)*11;
+     hedaer("location:https://daculagutters.com/index.php?msg=1;");
+      //echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
+     // echo "$". $result;
+      die;
+  }
+  if($qouat=="Commercial Quote"){
+      $result=(($feet+$req)*$all)*22;
+     // echo "$". $result;
+     // echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
+      die;
+  }
+}
+
+
+?>
+ 
+  
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
   class="wf-ubuntu-n4-active wf-ubuntu-i4-active wf-ubuntu-n7-active wf-oswald-n4-active wf-oswald-i4-active wf-oswald-n7-active wf-oswald-i7-active wf-ubuntu-i7-active wf-opensans-n4-active wf-opensans-n7-active wf-raleway-n4-active wf-raleway-n7-active wf-opensans-i4-active wf-opensans-i7-active wf-raleway-i4-active wf-raleway-i7-active wf-active">
@@ -435,32 +466,3 @@ For your job, we estimate that our pricing would be $<X>
       
     </div>
 </html>  
-   <?php
-if(isset($_POST['btn'])){
-  $name=$_POST['name'];
-  $email=$_POST['email'];
-  
-  $qouat=$_POST['qouat'];
-  $time=$_POST['time'];
-  $feet=$_POST['feet'];
-  $req=$_POST['req'];
-  $all=$_POST['all'];
-  if($qouat=="Residential Quote"){
-      $result=(($feet+$req)*$all)*11;
-     hedaer("location:https://daculagutters.com/index.php?msg=1;");
-      //echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
-     // echo "$". $result;
-      die;
-  }
-  if($qouat=="Commercial Quote"){
-      $result=(($feet+$req)*$all)*22;
-     // echo "$". $result;
-     // echo "<script>alert('Thank you $name for giving us the opportunity For your job, we estimate that our pricing would be $$result');window.location.href='index.php';</script>";
-      die;
-  }
-}
-
-
-?>
- 
-  
