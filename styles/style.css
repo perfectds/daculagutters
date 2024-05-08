@@ -1,24 +1,46 @@
-.main{
-    margin: 0px;
-    padding: 0px;
+
+.main {
+    margin: 0;
+    padding: 0;
 }
-.head-line{
-    margin:0px;
-    padding: 0px;
+
+.head-line {
     background-color: #000000;
     height: 100px;
-
 }
-.hero-section{
+
+.site-logo img {
+    margin-left: 130px;
+    padding-top: 15px;
+}
+
+.hero-section {
     background-image: url('/images/SUBURBAN.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
+.intro{
+    font-size: 20px;
+    line-height: 30px;
+}
+.title-1{
+    font-size: 20px;
+    line-height: 30px;
+}
+.title-2{
+    font-size: 20px;
+    line-height: 30px;
+}
+.title-3{
+    font-size: 20px;
+    line-height: 30px;
+}
+.form-area {
+    background-color: #fff;
+}
 
-.form-area{
+.footer {
     background-color: #da2b26;
 }
-.footer{
-    background-color:#da2b26;
-}
+ 
 
