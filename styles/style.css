@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
 }
-body{
+html,body{
+     width:100%;
      overflow-x: hidden;
 }
 .head-line {
