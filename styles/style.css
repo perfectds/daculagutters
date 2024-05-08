@@ -3,7 +3,10 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+     width: 100%;
+     overflow-x: hidden ;
+}
 .head-line {
     background-color: #000000;
     height: 100px;
