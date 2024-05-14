@@ -75,5 +75,8 @@ html,body{
     font-size: 18px;
     font-weight: bold;
   }
+#trigger-paragraph{
+    cursor: pointer;
+  }
 
 
