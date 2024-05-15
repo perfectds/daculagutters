@@ -18,7 +18,7 @@ html,body{
 }
 
 .hero-section {
-    background-image: url('/images/banner.jpg');
+    background-image: url('https://daculagutters.com/images/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
