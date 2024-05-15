@@ -78,6 +78,11 @@ html,body{
 #trigger-paragraph{
     cursor: pointer;
   }
+@media only screen and (max-width: 600px) {
+    .video-section{
+        margin-left: 25px;
+    }
+}
 
 
 
