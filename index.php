@@ -1,4 +1,6 @@
   <?php
+
+
 if($_POST['submit']){
   // Multiple recipients
     $to  = 'aidan@example.com' . ', '; // Note the comma
