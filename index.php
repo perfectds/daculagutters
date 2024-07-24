@@ -1,36 +1,3 @@
-  <?php
-
-
-if($_POST['submit']){
-  // Multiple recipients
-    $to  = 'aidan@example.com' . ', '; // Note the comma
-    $to .= 'wez@example.com';
-
-    // Subject
-    $subject = 'Birthday Reminders for August';
-
-    // Message
-    $message = '
-      <p>Here are the birthdays upcoming in August!</p>
-    ';
-
-    // To send HTML mail, the Content-type header must be set
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-
-    // Additional headers
-    $headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-    $headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-
-
-    // Mail it
-    mail($to, $subject, $message, $headers);
-  $msg = "Your message has been sent successfully.";
-}
-
-
-?>
-
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -115,7 +82,7 @@ width:100%;
                         <div class="form-area">
                             <div class="free-estimate"><img src="images/free-estimate-1.png" width="130" alt=""></div>
                             <div class="form-first-text">Request a Free Roofing Replacement Estimate With Our Expert!</div>
-                            <div style="color:#000;"> <?php echo $msg; ?></div>
+                             
                            <form action="index.php" method="post" name="email">
                                 <table class="new-table">
                                     <tr>
