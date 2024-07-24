@@ -53,7 +53,7 @@ width:100%;
 
             <!-- hero start -->
             <!-- <div class="row hero-section" style="background-image: url('https://daculagutters.com/images/goodshepherd.jpeg');"> -->
-                <div class="row hero-section overlay" style="background-image: url('images/goodshepherd.jpeg');">
+                <div class="row hero-section overlay" style="background-image: url('images/goodshepherd.jpg');">
                 <div class="col-sm-12 col-md-7 text-center text-md-start p-5">
                     <!-- <iframe width="100%" height="355" src="https://www.youtube.com/embed/uY0x66pevrQ" frameborder="0" autoplay allowfullscreen></iframe> -->
                      <div class="contant-section">
