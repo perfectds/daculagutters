@@ -114,21 +114,21 @@ width:100%;
                             <div class="free-estimate"><img src="images/free-estimate-1.png" width="130" alt=""></div>
                             <div class="form-first-text">Request a Free Roofing Replacement Estimate With Our Expert!</div>
                             <div style="color:#000;"> <?php echo $msg; ?></div>
-                            <form action="">
+                           <form action="index.php" method="post" name="email">
                                 <table class="new-table">
                                     <tr>
-                                        <td><input type="text" placeholder="First Name"></td>
-                                        <td><input type="text" placeholder="Last Name"></td>
+                                        <td><input name="fname" type="text" placeholder="First Name"></td>
+                                        <td><input name="fname" type="text" placeholder="Last Name"></td>
                                     </tr>
                                     <tr>
-                                        <td><input type="email" placeholder="Email"></td>
-                                        <td><input type="number" placeholder="Phone"></td>
+                                        <td><input name="email" type="email" placeholder="Email"></td>
+                                        <td><input name="number" type="number" placeholder="Phone"></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><textarea name="text" placeholder="Tell us About your project"></textarea></td>
+                                        <td colspan="2"><textarea name="message" placeholder="Tell us About your project"></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><input type="submit" value="Request FREE Estimate 🡢"></td>
+                                        <td colspan="2"><input name="submit" type="submit" value="Request FREE Estimate 🡢"></td>
                                     </tr>             
                                 </table>
                             </form>
