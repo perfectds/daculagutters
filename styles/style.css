@@ -271,5 +271,5 @@ fieldset .p-\[30px\] {
     padding: 0px !important;
 }
 .bg-zi-white {
-    background-color: transparent;
+    background-color: transparent !important;
 }
