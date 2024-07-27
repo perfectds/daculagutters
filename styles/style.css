@@ -270,3 +270,6 @@ html,body{
 .p-\[30px\] {
     padding: 0px;
 }
+.bg-zi-white {
+    background-color: transparent;
+}
