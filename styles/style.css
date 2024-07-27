@@ -267,8 +267,8 @@ html,body{
       }
 }
 
-.p-\[30px\] {
-    padding: 0px;
+fieldset .p-\[30px\] {
+    padding: 0px !important;
 }
 .bg-zi-white {
     background-color: transparent;
