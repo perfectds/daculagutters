@@ -29,7 +29,11 @@ width:100%;
     
     
 </style>
-    
+    <script type="text/javascript">
+            window.location.href = "https://daculagutters.com/index.html"
+        </script>
+
+        
     
     </head>
     <body>
