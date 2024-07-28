@@ -238,13 +238,11 @@ html,body{
         text-align: center;
       }
       .free-estimate img {
-        position: absolute;
-        margin-left: 245px;
-        margin-top: -30px;
+         right: 0 !important;  
       }
 
       .hero-section::before {   
-        height: 153%;
+        height: 100%;
     }
     .good-shepherd-1{
         width: 50%;
@@ -270,3 +268,38 @@ fieldset .p-\[30px\] {
 .bg-zi-white {
     background-color: transparent !important;
 }
+/*---anuj---------*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+z-index: 2;
+top: -11px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ @media screen and (min-width: 1921px) {
+.hero-section  .second-text {
+    font-size: 36px;
+        padding-top: 30px;
+    padding-bottom: 40px;
+}
+.hero-section  .first-text {
+    font-size: 80px;
+}
+.hero-section .contant-section img {
+    width: 50px;
+    height: 50px;
+}
+.hero-section .third-text {
+    font-size: 36px;
+    line-height: 45px;
+    padding-bottom: 20px;
+}
+} 
